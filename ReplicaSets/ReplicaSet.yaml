@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-replicaset
+  name: nginx-replicaset1
   labels:
     app: nginx
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
@@ -15,5 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx-container
+      - name: nginx-container3
         image: registry.hub.docker.com/library/nginx
